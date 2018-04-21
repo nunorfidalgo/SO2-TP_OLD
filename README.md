@@ -39,6 +39,7 @@ O jogo terá naves invasores e defensoras, tiros, bombas e powerups, assim como 
     - [ ] Suporte a memória partilhada;
     - [ ] Suporte a named pipes;
 - [ ] Código inicial da bridge(DDL):
+	- [x] Estrutura de dados;
 	- [x] Livraria DLL;
     - [ ] Zona de mensagens;
     - [ ] Zona de dados do jogo;
