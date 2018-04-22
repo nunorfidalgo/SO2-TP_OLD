@@ -59,7 +59,7 @@ BOOL WINAPI DllMain(HANDLE hInstance, DWORD razao, LPVOID tipo_declaracao) {
 		if (tipo_declaracao == NULL)
 			_tprintf(TEXT("\n3"));
 		else
-			_tprintf(TEXT("Brige: terminou..."));
+			_tprintf(TEXT("Bridge: terminou..."));
 		break;
 	}
 	return 1;
