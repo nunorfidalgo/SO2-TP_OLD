@@ -1,13 +1,23 @@
 /*
-* Criar projecto vazio
-* em "Propriedades->Confifuration Propresties->General" mudar:
-* Character Set: Use Unicode Character Set
-* em "Propriedades->Confifuration Propresties -> C/C++ -> Preprocessor" adicionar:
-WIN32
-_DEBUG
-_CONSOLE
-* em "Propriedades->Confifuration Propresties -> Linker -> Input -> Addicional Dependencies" adicionar:
-../Debug/bridge.lib
+* Criar um projecto vazio
+* Projecto: "Properties -> Configuration: All Configurations" e "Platform: All Platforms" mudar:
+	* "Configuration Properties->General":
+		* Character Set: Use Unicode Character Set
+		* em "Configuration Properties -> C/C++ -> Preprocessor" adicionar:
+			WIN32
+			_DEBUG
+			_CONSOLE
+	* "Configuration Properties -> Linker -> Input -> Addicional Dependencies" adicionar:
+		* ter ATENÇÃO x86:
+			* "Properties -> Configuration: All Configurations" mudar para: Debug e adicionar:
+				$(SolutionDir)Debug\bridge.lib
+			* "Properties -> Configuration: All Configurations" mudar para: Release e adicionar:
+				$(SolutionDir)Release\bridge.lib
+		* ter ATENÇÃO x64:
+			* "Properties -> Configuration: All Configurations" mudar para: Debug e adicionar:
+				$(SolutionDir)x64\Debug\bridge.lib
+			* "Properties -> Configuration: All Configurations" mudar para: Release e adicionar:
+				$(SolutionDir)x64\Release\bridge.lib
 */
 
 #include <windows.h>
@@ -19,7 +29,7 @@ _CONSOLE
 #include "servidor.h"
 
 // #include "DLL.h"
-#include "../bridge/bridge.h" // adicionar ao linker: ../Debug/bridge.lib
+#include "../bridge/bridge.h" // Adicionar o ficheiro .lib aoa Linker, ver comentarios inciais
 
 int _tmain(int argc, TCHAR *argv[]) {
 
@@ -31,7 +41,7 @@ int _tmain(int argc, TCHAR *argv[]) {
 
 	//Chamar a funcao da Dll
 	Teste();
-	_tprintf(TEXT("\Valor: %d"), UmValor(45));
+	_tprintf(TEXT("\nValor: %d"), UmValor(45));
 
 	_tprintf(TEXT("\nServidor: terminou...\n"));
 	return 0;

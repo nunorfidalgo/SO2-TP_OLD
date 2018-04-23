@@ -3,16 +3,16 @@
 #include <windows.h>
 #include <tchar.h>
 
-#ifdef BRIDGE_EXPORTS // mudar de DLL_EXPORTS -> ver em propriedades do project-> C\C++ -> Preprocessador
-#define DLL_IMP_API __declspec(dllexport)
+#ifdef BRIDGE_EXPORTS // em "Configuration Properties -> C/C++ -> Preprocessor" adicionar: BRIDGE_EXPORTS 
+#define BRIDGE_API __declspec(dllexport)
 #else
-#define DLL_IMP_API __declspec(dllimport)
+#define BRIDGE_API __declspec(dllimport)
 #endif
 
 extern "C" // usar em C ou C++
 {
-	extern DLL_IMP_API int nDLL;
+	extern BRIDGE_API int nDLL;
 
-	DLL_IMP_API int Teste(void);
-	DLL_IMP_API int UmValor(int v);
+	BRIDGE_API void Teste(void);
+	BRIDGE_API int UmValor(int v);
 }
