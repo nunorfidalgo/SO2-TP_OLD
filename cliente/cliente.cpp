@@ -28,8 +28,6 @@
 
 #include "cliente.h"
 
-// #include "DLL.h"
-#include "../bridge/bridge.h" // Adicionar o ficheiro .lib aoa Linker, ver comentarios inciais
 
 int _tmain(int argc, TCHAR *argv[]) {
 
@@ -38,10 +36,6 @@ int _tmain(int argc, TCHAR *argv[]) {
 	_setmode(_fileno(stdout), _O_WTEXT);
 #endif
 	_tprintf(TEXT("\nCliente: pronto..."));
-
-	//Chamar a funcao da Dll
-	Teste();
-	_tprintf(TEXT("\nValor: %d"), UmValor(30));
 
 	_tprintf(TEXT("\nCliente: terminou...\n"));
 	return 0;

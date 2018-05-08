@@ -33,7 +33,7 @@ O jogo terá naves invasores e defensoras, tiros, bombas e powerups, assim como 
 	- [ ] Thread para gerir a temporização e efeitos dos powerups;
 	- [ ] Thread para gerir os jogadores;
 - [x] Código inicial da cliente(GUI):
-	- [ ] Retirar accesso ao DLL
+	- [x] Retirar accesso ao DLL
 	- [ ] GUI e interface com o utilizador;
     - [ ] Recolhe as teclas do jogador e envia-as ao jogo;
     - [ ] Suporte a named pipes;
