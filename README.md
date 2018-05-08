@@ -47,3 +47,6 @@ O jogo terá naves invasores e defensoras, tiros, bombas e powerups, assim como 
 	- [x] Livraria DLL;
     - [ ] Zona de mensagens;
     - [ ] Zona de dados do jogo;
+- [x] Criacão de um script para iniciar todas as aplicações em cada linha de comandos
+	- [x] suporta apenas x86
+	- [ ] adiconar suporte para x64 através de argumentos
