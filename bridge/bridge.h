@@ -15,4 +15,6 @@ extern "C" // usar em C ou C++
 
 	DLL_IMP_API int Teste(void);
 	DLL_IMP_API int UmValor(int v);
+	DLL_IMP_API int patrao();
+	DLL_IMP_API int empregado();
 }
