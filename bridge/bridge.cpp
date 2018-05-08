@@ -69,13 +69,13 @@ BOOL WINAPI DllMain(HANDLE hInstance, DWORD razao, LPVOID tipo_declaracao) {
 	switch (razao) {
 	case DLL_PROCESS_ATTACH:
 		if (tipo_declaracao == NULL)
-			_tprintf(TEXT("\n1"));
+			_tprintf(TEXT("\Bridge: Ocorreu um erro ao iniciar a DLL!"));
 		else
-			_tprintf(TEXT("Bridge: pronta..."));
+			_tprintf(TEXT("Bridge: pronto..."));
 		break;
 	case DLL_PROCESS_DETACH:
 		if (tipo_declaracao == NULL)
-			_tprintf(TEXT("\n3"));
+			_tprintf(TEXT("Bridge: Ocorreu um erro a terminar!"));
 		else
 			_tprintf(TEXT("Bridge: terminou..."));
 		break;
