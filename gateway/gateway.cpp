@@ -39,8 +39,11 @@ int _tmain(int argc, TCHAR *argv[]) {
 #endif
 	_tprintf(TEXT("\nGateway: pronto..."));
 
+	_tprintf(TEXT("\nGateway: TESTE1..."));
+
 	//Chamar a funcao da Dll
 	Teste();
+	_tprintf(TEXT("\nGateway: TESTE2..."));
 	_tprintf(TEXT("\nValor: %d"), UmValor(120));
 
 	_tprintf(TEXT("\nGateway: terminou...\n"));

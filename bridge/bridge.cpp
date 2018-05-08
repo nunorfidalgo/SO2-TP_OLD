@@ -34,6 +34,7 @@ Memoria partilhada
 #include <io.h>
 #include <fcntl.h>
 #include <stdio.h>
+
 #include "bridge.h" //DLL.h"
 
 // Estrutura de dados
@@ -55,8 +56,9 @@ typedef struct {
 	int y;
 } POWERUPS;
 
-void Teste(void) {
+int Teste(void) {
 	_tprintf(TEXT("\nbridge: texto de teste...\n"));
+	return 0;
 }
 
 int UmValor(int v) {
